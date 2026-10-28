@@ -191,6 +191,7 @@ transform-origin: center;
 .product-item p {
   font-size: 13px;
   line-height: 1.8;
+  text-align: center;
 }
 
 
@@ -368,11 +369,27 @@ transform-origin: center;
   transition: transform 0.3s ease;
 }
 
-
+@media (hover: hover) and (pointer: fine) {
+  .menu-toggle:hover {
+    transform: rotate(-8deg);
+  }
+}
 /* スマホ対応 */
 @media (max-width: 768px) {
 
+  .main-visual img {
+    height: 400px;
+  }
+
+  .concept > p:last-child {
+    font-size: 14px;
+  }
+
+    .concept h2 {
+    font-size: 23px;
+  }
   /* 商品ー */
+  
   .product-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 16px;
@@ -441,10 +458,7 @@ transform-origin: center;
     background-color: #443b32;
   }
 
-  .menu-toggle:hover {
-    transform: rotate(-8deg);
-  }
-
+  
   /* ナビゲーションメニュー */
   header nav {
     display: none;
