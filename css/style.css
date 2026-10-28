@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #443b32;
+  font-family: serif;
+  background-color: #FFF8E9;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 52px 5%;
+  background-color: transparent;
+  z-index: 10;
+}
+
+header h1 {
+  text-align: left;
+  font-size: 63px;
+  font-weight: normal;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+
+header h1,
+header a {
+  color: #fff;
+}
+
+
+
+header ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+  font-size: 20px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+
+/* スクロールした後のヘッダー */
+
+header.scrolled {
+  position: fixed;
+  padding: 10px 7%;
+  background-color: rgba(255, 253, 247, 0.9);
+  box-shadow: none;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+
+header.scrolled h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+  color: #443b32;
+}
+
+
+header.scrolled ul {
+  gap: 24px;
+}
+
+header.scrolled a {
+  color: #443b32;
+  font-size:16px;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+.main-visual img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+.concept {
+  padding: 100px 5% 110px;
+  background-color:  #F5DAD6;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.section-label {
+  font-family: sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: #9b785a;
+  margin-bottom: 24px;
+}
+
+.concept h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: normal;
+  line-height: 1.5;
+  color: #443b32;
+  margin-bottom: 28px;
+}
+
+.concept > p:last-child {
+  font-size: 17px;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  color: #665749;
+}
+
+
+
+/* TEA セクション */
+
+.products {
+  padding: 100px 7% 120px;
+  background-color: #F8F0D5;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: normal;
+  margin-bottom: 18px;
+}
+
+.products-intro {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 55px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 13px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin-bottom: 20px;
+
+transition: transform 0.4s ease;
+transform-origin: center;
+}
+
+.product-item h3 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+.product-item p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+
+
+
+/* ABOUT セクション */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+  padding: 110px 10%;
+  background-color: #fff0e7;
+}
+
+.about-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: left;
+  margin-left: 150px;
+}
+
+.about-text .section-label {
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: 28px;
+}
+
+.about-lead {
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+.about-description {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+/* タグ */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.about-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid;
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+
+
+.domestic {
+  color: #58734c;
+  background-color: #edf1e7;
+  border-color: #cbd8c2;
+}
+
+.decaf {
+  color: #a75f65;
+  background-color: #fbe9e7;
+  border-color: #edc9c7;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  padding: 55px 7% 22px;
+  background-color: #F5DAD6;
+  text-align: left;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 35px;
+}
+
+
+.footer-label {
+  font-family: sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #a75f65;
+  margin-bottom: 14px;
+}
+
+.footer-brand h2 {
+  font-size: clamp(45px, 6vw, 76px);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin-bottom: 8px;
+}
+
+
+
+.footer-message {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.footer-links {
+  padding-bottom: 5px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.footer-nav a {
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.55;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e8bdb8;
+  color: #927b6d;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* ハンバーガー*/
+.menu-toggle {
+  display: none;
+  border: 1px solid #e8bdb8;
+  border-radius: 50%;
+  background-color: #f6dcd8;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+
+  /* 商品ー */
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 16px;
+  }
+
+  .product-description span {
+    display: block;
+  }
+
+  /* ABOUT */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 70px 7%;
+  }
+
+  .about-text {
+    margin-left: 0;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 40px 7% 20px;
+  }
+
+  .footer-top {
+    gap: 30px;
+  }
+
+  .footer-brand h2 {
+    font-size: clamp(32px, 7vw, 48px);
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 6%;
+  }
+
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  /* ハンバーガーボタン */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    flex-shrink: 0;
+    z-index: 12;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #443b32;
+  }
+
+  .menu-toggle:hover {
+    transform: rotate(-8deg);
+  }
+
+  /* ナビゲーションメニュー */
+  header nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 6%;
+    left: auto;
+    width: 220px;
+    height: auto;
+    padding: 16px 24px;
+    background-color: #fffdf7;
+    border: 1px solid #f0e2d6;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(68, 59, 50, 0.10);
+    z-index: 11;
+    box-sizing: border-box;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-size: 16px;
+  }
+
+  header nav li {
+    width: 100%;
+  }
+
+  header nav a {
+    display: block;
+    padding: 13px 0;
+    color: #443b32;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  header.menu-open nav {
+    display: block;
+  }
+
+  /* スクロール後のヘッダー */
+  header.scrolled {
+    padding: 12px 6%;
+  }
+
+  header.scrolled h1 {
+    font-size: 24px;
+  }
+
+  header.scrolled .menu-toggle span {
+    background-color: #443b32;
+  }
+
+  header.scrolled nav ul {
+    gap: 0;
+  }
+
+  header.scrolled nav a {
+    font-size: 15px;
+  }
+}
+
+
+/* PCでの商品説明 */
+@media (min-width: 769px) {
+  .product-description span {
+    display: inline;
+  }
+}
+
+
+
+
+
+
+
+
+/* 飾りエリア */
+.concept-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 花と星の設定 */
+.concept .decoration {
+  position: absolute;
+  display: block;
+  animation: concept-float 4s ease-in-out infinite;
+}
+
+/* 花 */
+.concept .flower {
+  color: #E99A9C;
+  font-size: 32px;
+}
+
+/* 星 */
+.concept .star {
+  color: #D5A82F;
+  font-size: 30px;
+}
+
+/* 位置 */
+.concept .flower-1 {
+  top: 12%;
+  left: 16%;
+}
+
+.concept .star-1 {
+  top: 18%;
+  right: 22%;
+  animation-delay: 1s;
+}
+
+.concept .flower-2 {
+  bottom: 12%;
+  left: 38%;
+  font-size: 24px;
+  animation-delay: 2s;
+}
+
+.concept .star-2 {
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.concept .flower-3 {
+  top: 65%;
+  right: 15%;
+  font-size: 20px;
+  animation-delay: 1.5s;
+}
+
+/* 動き */
+@keyframes concept-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+/* 文章を飾りより前に */
+.concept > p,
+.concept > h2 {
+  position: relative;
+  z-index: 1;
+}
